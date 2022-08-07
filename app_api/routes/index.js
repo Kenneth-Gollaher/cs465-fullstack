@@ -2,8 +2,16 @@ const express = require("express");
 const router = express.Router();
 
 const tripsController = require("../controllers/trips");
-// request from trips and pass to controller
-router.route("/trips").get(tripsController.tripsList);
+
+router
+  .route("/trips")
+  .get(tripsController.tripsList)
+  .post(tripsController.tripsAddTrip);
+
+router
+  .route("/trips/:tripCode")
+  .get(tripsController.tripsList)
+  .put(tripsController.tripsUpdateTrip);
 
 router.route("/trips/:tripCode").get(tripsController.tripsFindCode);
 

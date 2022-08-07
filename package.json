@@ -1,6 +1,8 @@
 {
   "name": "travlr",
   "version": "0.0.0",
+  "description": "Travlr Getaways",
+  "author": "Kenneth Gollaher",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
